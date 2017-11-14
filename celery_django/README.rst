@@ -34,3 +34,7 @@ Starting the worker
 .. code-block:: bash
 
     $ celery -A proj worker -l info
+
+.. example for myself
+    celery -A proj worker --loglevel=INFO --concurrency=1  --logfile /tmp/celery.log  --queues=deploy_task,rollback_task
+
