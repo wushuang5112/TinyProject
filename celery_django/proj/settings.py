@@ -9,7 +9,7 @@ from __future__ import absolute_import
 BROKER_URL = 'amqp://deploy:deploy@192.168.58.131:5672//celery_django'
 # CELERY_RESULT_BACKEND = 'amqp://deploy:deploy@192.168.58.131:5672//celery_django_result'
 # CELERY_RESULT_BACKEND = 'amqp://deploy:deploy@192.168.58.131:5672//celery_django_result'
-CELERY_RESULT_BACKEND = 'amqp://'
+CELERY_RESULT_BACKEND = 'amqp://deploy:deploy@192.168.58.131:5672//celery_django_result'
 
 #: Only add pickle to this list if your broker is secured
 #: from unwanted access (see userguide/security.html)
@@ -141,6 +141,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'kombu.transport.django',
     'demoapp',
+    'demotask',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
