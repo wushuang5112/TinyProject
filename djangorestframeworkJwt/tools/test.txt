@@ -1,0 +1,24 @@
+# 验证
+curl -X POST -d "username=admin&password=password123" http://localhost:8000/api-token-auth/
+或
+curl -X POST -H "Content-Type: application/json" -d '{"username":"admin","password":"password123"}' http://localhost:8000/api-token-auth/
+
+# 测试
+curl -H "Authorization: JWT <your_token>" http://localhost:8000/protected-url/
+
+# 刷新
+curl -X POST -H "Content-Type: application/json" -d '{"token":"<EXISTING_TOKEN>"}' http://localhost:8000/api-token-refresh/
+
+# 验证
+curl -X POST -H "Content-Type: application/json" -d '{"token":"<EXISTING_TOKEN>"}' http://localhost:8000/api-token-verify/
+
+
+
+
+
+
+
+
+
+
+
